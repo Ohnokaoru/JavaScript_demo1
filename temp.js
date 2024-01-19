@@ -161,3 +161,9 @@
  for(let i=0;number.length;i++){
     console.log(number[i].join(","));
  }
+
+ //取得時間
+ document.write(Date());
+
+let d=3.5;
+ document.write(parseInt(d);)

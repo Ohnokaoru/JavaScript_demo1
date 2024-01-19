@@ -5,58 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 
 <body>
     <h1>JavaScript</h1>
     <h2>本期預測號碼:</h2>
+    <button>產生號碼</button>
+    <div id="lottroy">
 
 
 
 
+    </div>
+    <script src="./index.js"></script>
 
-    <script>
-
-
-        //函式 (python定要先宣告才能使用，JavaScript則不需要)
-        function getRandomInt(start, end) {
-            let c = Math.floor(Math.random() * end) + start;
-            return c
-        }
-
-        // 大樂透1-49 
-        let number = [];
-        for (j = 0; j < 5; j++) {
-            numbers = [];
-            while (true) {
-                let c = getRandomInt(1, 49);
-                if (!numbers.includes(c)) {
-                    numbers.push(c);
-                }
-                if (numbers.length == 6) {
-                    break;
-                }
-            }
-
-            numbers.sort(compare);
-            number.push(numbers)
-        }
-        console.log(number);
-
-        //a-b<0 升敘
-        function compare(a, b) {
-            return a - b;
-        }
-
-        /** for i in range(len(number)):
-  print(number[i]) */
-        for (let i = 0; i < number.length; i++) {
-            console.log(number[i].join(","));
-            document.write(`<h3>第${i + 1}組號碼:${number[i].join(", ")}</h3><hr>`)
-        }
-
-        document.write(Date());
-    </script>
 </body>
 
 </html>
