@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h2>本期預測號碼:</h2>
+
+
+
+
+    <script>
+
+
+        //函式 (python定要先宣告才能使用，JavaScript則不需要)
+        function getRandomInt(start, end) {
+            let c = Math.floor(Math.random() * end) + start;
+            return c
+        }
+
+        // 大樂透1-49 
+        let number = [];
+        for (j = 0; j < 6; j++) {
+            numbers = [];
+            while (true) {
+                let c = getRandomInt(1, 49);
+                if (!numbers.includes(c)) {
+                    numbers.push(c);
+                }
+                if (numbers == 6) {
+                    break;
+                }
+            }
+            number.push(numbers)
+        }
+        console.log(number);
+    </script>
+</body>
+
+</html>
