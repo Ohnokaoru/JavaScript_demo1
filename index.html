@@ -14,6 +14,7 @@
 
 
 
+
     <script>
 
 
@@ -25,20 +26,36 @@
 
         // 大樂透1-49 
         let number = [];
-        for (j = 0; j < 6; j++) {
+        for (j = 0; j < 5; j++) {
             numbers = [];
             while (true) {
                 let c = getRandomInt(1, 49);
                 if (!numbers.includes(c)) {
                     numbers.push(c);
                 }
-                if (numbers == 6) {
+                if (numbers.length == 6) {
                     break;
                 }
             }
+
+            numbers.sort(compare);
             number.push(numbers)
         }
         console.log(number);
+
+        //a-b<0 升敘
+        function compare(a, b) {
+            return a - b;
+        }
+
+        /** for i in range(len(number)):
+  print(number[i]) */
+        for (let i = 0; i < number.length; i++) {
+            console.log(number[i].join(","));
+            document.write(`<h3>第${i + 1}組號碼:${number[i].join(", ")}</h3><hr>`)
+        }
+
+        document.write(Date());
     </script>
 </body>
 
